@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Games</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="top-section">
+        <div class="search-bar">
+            <input type="text" placeholder="Search games..." />
+        </div>
+        <div class="logo">
+            <img src="https://i.imgur.com/nFZXsB2.jpeg" alt="Football Logo" />
+        </div>
+    </header>
+
+    <!-- Slideshow Section -->
+    <section class="slideshow-container">
+        <div class="slides fade">
+            <img src="https://i.imgur.com/AloGdjt.png" alt="Slide 1">
+        </div>
+        <div class="slides fade">
+            <img src="https://i.imgur.com/EOg3nzY.png" alt="Slide 2">
+        </div>
+        <div class="slides fade">
+            <img src="https://i.imgur.com/7Z64Hew.png" alt="Slide 3">
+        </div>
+        <div class="dots-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <!-- Subsections -->
+    <section class="subsections">
+        <div class="subsection">
+            <h2>TikTok Filters</h2>
+        </div>
+        <div class="subsection">
+            <h2>My Originals</h2>
+        </div>
+        <div class="subsection">
+            <h2>Multiplayer</h2>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
