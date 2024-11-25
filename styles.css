@@ -1,0 +1,115 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background-color: black;
+    color: #edb940;
+}
+
+/* Top Section */
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Search Bar */
+.search-bar input {
+    width: 70%;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-family: 'Orbitron', sans-serif;
+    border: 1px solid #edb940;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo */
+.logo img {
+    height: 40px;
+    width: auto;
+    border-radius: 5px;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Slides */
+.slides {
+    display: none;
+}
+
+.slides img {
+    width: 100%; /* Adjust based on your design */
+    height: auto;
+}
+
+/* Dots */
+.dots-container {
+    text-align: center;
+    position: relative;
+    bottom: 10px;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #edb940;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #fff;
+}
+
+/* Fade Animation */
+.fade {
+    animation: fadeEffect 1s ease-in-out;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Subsections */
+.subsections {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: black; /* Matches the theme */
+    color: #edb940; /* Matches the color palette */
+}
+
+.subsection h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24px;
+    margin: 10px 0;
+    text-transform: uppercase;
+    color: #edb940;
+    border-left: 5px solid #edb940; /* Side heading effect */
+    padding-left: 15px;
+}
