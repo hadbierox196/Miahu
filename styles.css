@@ -3,7 +3,8 @@ body {
     margin: 0;
     font-family: 'Orbitron', sans-serif;
     background-color: black;
-    color: #edb940;
+    color: yellow;
+    overflow-x: hidden; /* Prevent horizontal scroll on mobile */
 }
 
 /* Top Section */
@@ -16,6 +17,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(255, 255, 0, 0.3); /* Subtle yellow glow */
 }
 
 /* Search Bar */
@@ -24,12 +26,16 @@ body {
     padding: 8px 12px;
     font-size: 14px;
     font-family: 'Orbitron', sans-serif;
-    border: 1px solid #edb940;
+    border: 1px solid yellow;
     border-radius: 20px;
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: yellow;
     outline: none;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.search-bar input:focus {
+    box-shadow: 0 0 10px yellow;
 }
 
 /* Logo */
@@ -37,6 +43,7 @@ body {
     height: 40px;
     width: auto;
     border-radius: 5px;
+    border: 2px solid yellow;
 }
 
 /* Slideshow Container */
@@ -46,45 +53,44 @@ body {
     margin: auto;
     overflow: hidden;
     text-align: center;
+    background-color: black;
 }
 
 /* Slides */
 .slides {
     display: none;
+    animation: fadeEffect 1s ease-in-out;
 }
 
 .slides img {
-    width: 100%; /* Adjust based on your design */
+    width: 100%;
     height: auto;
 }
 
 /* Dots */
 .dots-container {
     text-align: center;
-    position: relative;
-    bottom: 10px;
-    margin-top: 10px;
+    margin: 15px 0;
 }
 
 .dot {
-    height: 15px;
-    width: 15px;
-    margin: 0 5px;
-    background-color: #edb940;
+    height: 12px;
+    width: 12px;
+    margin: 0 6px;
+    background-color: yellow;
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
 }
 
+.dot:hover,
 .active {
-    background-color: #fff;
+    background-color: black;
+    border: 2px solid yellow;
 }
 
-/* Fade Animation */
-.fade {
-    animation: fadeEffect 1s ease-in-out;
-}
-
+/* Keyframe Animation */
 @keyframes fadeEffect {
     from {
         opacity: 0.4;
@@ -100,8 +106,8 @@ body {
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
-    background-color: black; /* Matches the theme */
-    color: #edb940; /* Matches the color palette */
+    background-color: black;
+    color: yellow;
 }
 
 .subsection h2 {
@@ -109,7 +115,34 @@ body {
     font-size: 24px;
     margin: 10px 0;
     text-transform: uppercase;
-    color: #edb940;
-    border-left: 5px solid #edb940; /* Side heading effect */
+    color: yellow;
+    border-left: 5px solid yellow;
     padding-left: 15px;
+    letter-spacing: 1px;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .top-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .search-bar input {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    .logo img {
+        margin-bottom: 10px;
+    }
+
+    .subsections {
+        padding: 15px;
+    }
+
+    .subsection h2 {
+        font-size: 20px;
+        padding-left: 10px;
+    }
 }
