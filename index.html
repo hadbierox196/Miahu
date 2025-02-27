@@ -11,9 +11,9 @@
     <!-- Header Section -->
     <header class="top-section">
         <div class="search-bar">
-            <input type="text" placeholder="Search games..." />
+            <input type="text" id="searchInput" placeholder="Search games..." oninput="filterGames()" />
         </div>
-
+    </header>
 
     <!-- Slideshow Section -->
     <section class="slideshow-container">
@@ -41,15 +41,14 @@
     <section class="subsections">
         <div class="subsection">
             <h2>TikTok Filters</h2>
+            <div class="games-container" id="tiktokFilters"></div>
         </div>
         <div class="subsection">
-            <h2>Top Rated </h2>
-        </div>
-        <div class="subsection">
-            <h2>Multiplayer</h2>
+            <h2>Top Rated</h2>
+            <div class="games-container" id="topRated"></div>
         </div>
     </section>
 
     <script src="script.js"></script>
 </body>
-            </html>
+</html>
