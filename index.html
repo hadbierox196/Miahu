@@ -3,15 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Football Games</title>
+    <title>Mishu</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background-color: #000;
+            color: #FFD700;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            padding: 20px;
+            text-align: center;
+            background-color: #333;
+        }
+        .search-bar input {
+            padding: 10px;
+            width: 300px;
+            border: 2px solid #FFD700;
+            border-radius: 5px;
+            background-color: #000;
+            color: #FFD700;
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        .slides {
+            display: none;
+            text-align: center;
+        }
+        .slides img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+        }
+        .dots-container {
+            text-align: center;
+            padding: 10px;
+        }
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 5px;
+            background-color: #555;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        .dot.active {
+            background-color: #FFD700;
+        }
+        .subsections {
+            padding: 20px;
+        }
+        .subsection {
+            margin-bottom: 40px;
+        }
+        .subsection h2 {
+            color: #FFD700;
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 10px;
+        }
+        .scroll-container {
+            display: flex;
+            overflow-x: auto;
+            padding: 10px 0;
+        }
+        .scroll-container a {
+            flex: 0 0 auto;
+            margin-right: 20px;
+            text-decoration: none;
+            color: #FFD700;
+            text-align: center;
+        }
+        .scroll-container img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 2px solid #FFD700;
+            border-radius: 10px;
+        }
+        .scroll-container a:hover img {
+            border-color: #FFF;
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
     <header class="top-section">
         <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Search games..." oninput="filterGames()" />
+            <input type="text" placeholder="Search games..." oninput="filterGames()" id="searchInput" />
         </div>
     </header>
 
@@ -39,16 +126,131 @@
 
     <!-- Subsections -->
     <section class="subsections">
+        <!-- TikTok Filters -->
         <div class="subsection">
             <h2>TikTok Filters</h2>
-            <div class="games-container" id="tiktokFilters"></div>
+            <div class="scroll-container" id="tiktokFilters">
+                <a href="https://blind-rank-ecru.vercel.app/" target="_blank">
+                    <img src="https://i.imgur.com/YGx7bmf.png" alt="Blind Ranking">
+                    <p>Blind Ranking</p>
+                </a>
+                <a href="https://improve-player.vercel.app/" target="_blank">
+                    <img src="https://i.imgur.com/vzuWuYX.png" alt="Improve Player">
+                    <p>Improve Player</p>
+                </a>
+                <a href="https://manager-career.vercel.app/" target="_blank">
+                    <img src="https://i.imgur.com/sTtmJAg.png" alt="Managerial Career">
+                    <p>Managerial Career</p>
+                </a>
+                <a href="https://murder-mystery-sable.vercel.app/" target="_blank">
+                    <img src="https://i.imgur.com/ymMxPhE.png" alt="Murder Mystery">
+                    <p>Murder Mystery</p>
+                </a>
+                <a href="https://double-team.vercel.app/" target="_blank">
+                    <img src="https://i.imgur.com/a5wcpVC.png" alt="Double Team">
+                    <p>Double Team</p>
+                </a>
+            </div>
         </div>
+
+        <!-- Top Rated -->
         <div class="subsection">
             <h2>Top Rated</h2>
-            <div class="games-container" id="topRated"></div>
+            <div class="scroll-container" id="topRated">
+                <a href="https://blind-rank-ecru.vercel.app/" target="_blank">
+                    <img src="https://i.imgur.com/YGx7bmf.png" alt="Blind Ranking">
+                    <p>Blind Ranking</p>
+                </a>
+                <a href="https://improve-player.vercel.app/" target="_blank">
+                    <img src="https://i.imgur.com/vzuWuYX.png" alt="Improve Player">
+                    <p>Improve Player</p>
+                </a>
+                <a href="https://career-gamma.vercel.app/" target="_blank">
+                    <img src="https://i.imgur.com/tgwa05O.png" alt="Build Team">
+                    <p>Build Team</p>
+                </a>
+                <a href="https://manager-career.vercel.app/" target="_blank">
+                    <img src="https://i.imgur.com/sTtmJAg.png" alt="Managerial Career">
+                    <p>Managerial Career</p>
+                </a>
+                <a href="https://murder-mystery-sable.vercel.app/" target="_blank">
+                    <img src="https://i.imgur.com/ymMxPhE.png" alt="Murder Mystery">
+                    <p>Murder Mystery</p>
+                </a>
+                <a href="https://guess-player.vercel.app/" target="_blank">
+                    <img src="https://i.imgur.com/nMY9lv9.png" alt="Guess Player">
+                    <p>Guess Player</p>
+                </a>
+                <a href="https://higherorlower-sigma.vercel.app/" target="_blank">
+                    <img src="https://i.imgur.com/yHXeQ43.png" alt="Higher or Lower">
+                    <p>Higher or Lower</p>
+                </a>
+                <a href="https://double-team.vercel.app/" target="_blank">
+                    <img src="https://i.imgur.com/a5wcpVC.png" alt="Double Team">
+                    <p>Double Team</p>
+                </a>
+            </div>
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <script>
+        // Slideshow functionality
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            const slides = document.getElementsByClassName("slides");
+            const dots = document.getElementsByClassName("dot");
+
+            // Hide all slides
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            // Increment slide index
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+
+            // Remove "active" class from all dots
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            // Show current slide and set corresponding dot as active
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+
+            // Change image every 5 seconds
+            setTimeout(showSlides, 5000);
+        }
+
+        function currentSlide(n) {
+            slideIndex = n - 1; // Set slide index to chosen slide
+            showSlides();
+        }
+
+        // Search functionality
+        function filterGames() {
+            const input = document.getElementById("searchInput").value.toLowerCase();
+            const containers = document.querySelectorAll(".scroll-container");
+
+            containers.forEach(container => {
+                const links = container.getElementsByTagName("a");
+                let found = false;
+                for (let i = 0; i < links.length; i++) {
+                    const text = links[i].textContent.toLowerCase();
+                    if (text.includes(input)) {
+                        links[i].style.display = "block";
+                        found = true;
+                    } else {
+                        links[i].style.display = "none";
+                    }
+                }
+                container.style.display = found ? "flex" : "none";
+            });
+        }
+    </script>
 </body>
 </html>
