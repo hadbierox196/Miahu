@@ -83,7 +83,7 @@ body {
 }
 
 .game-card {
-    width: 100px;
+    width: 75px;
     text-align: center;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -97,7 +97,7 @@ body {
 }
 
 .game-card img {
-    width: 200%;
+    width: 300%;
     height: 150px;
     object-fit: fill;
 }
