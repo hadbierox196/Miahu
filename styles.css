@@ -99,7 +99,7 @@ body {
 .game-card img {
     width: 200%;
     height: 150px;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .game-card h3 {
