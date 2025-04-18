@@ -18,14 +18,11 @@ body {
     border: none;
     border-radius: 5px;
 }
-
 .slideshow-container {
-    position: relative;
-    max-width: 1000px;
-    margin: auto;
-    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
 }
-
 .slides {
     display: none;
     text-align: center;
@@ -33,9 +30,10 @@ body {
 
 .slides img {
     width: 100%;
-    height: auto;
+    height: 60vh;
     max-height: 400px;
     object-fit: cover;
+    display: block;
 }
 
 .dots-container {
